@@ -1,0 +1,186 @@
+
+body {
+  margin: 0;
+  background: linear-gradient(to bottom right, #e0f7fa, #e8f5e9);
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+
+.split-money {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+
+
+.name-amount-add {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+.input-info {
+  margin-bottom: 40px;
+}
+
+
+
+.input-name,
+.input-num {
+  font-size: 18px;
+  padding: 12px 15px;
+  border: 2px solid rgb(239, 233, 233);
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.input-num {
+  width: 130px;
+}
+
+.input-num:focus,
+.input-name:focus
+ {
+  border-color: rgba(0, 128, 0, 0.845);
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+
+}
+
+
+.add-btn {
+  font-family: Poppins;
+  font-size: 16px;
+  padding: 12px 25px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(29, 169, 29);
+  cursor: pointer;
+  transition: 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.add-btn:hover {
+  background-color: rgb(7, 134, 7);
+  transform: translateY(-2px);
+}
+
+
+.listofAmounts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  border-radius: 12px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  background: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: 0.2s ease;
+}
+
+.list:hover {
+  transform: scale(1.02);
+  background: white;
+}
+
+
+.delete-button {
+  font-family: Poppins;
+  font-size: 14px;
+  padding: 8px 16px;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  background-color: rgb(234, 2, 2);
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.delete-button:hover {
+  background-color: rgb(177, 0, 0);
+  transform: translateY(-1px); /* give illusion that button is being pressed (moves button up 1 px)*/
+}
+
+
+.balances,
+.summary {
+  color: #444;
+  font-weight: 600;
+  font-size: 28px;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Balances List */
+.balances-list,
+.summary-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.balances-list li {
+  width: 60%;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 500;
+  margin: 6px 0;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+
+
+
+.summary-list li {
+  width: 60%;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 10px;
+  background: #f0f0f0;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.balances-list li.owes {
+  background: #ffe5e5;
+  color: #e53935;
+}
+
+.balances-list li.owed {
+  background: #e6ffef;
+  color: #2e7d32;
+}
+
+
+@media (max-width: 600px) {
+  .list, 
+  .balances-list li, 
+  .summary-list li {
+    width: 90%;
+  }
+
+  .input-name,
+  .input-num {
+    width: 100%;
+  }
+}
